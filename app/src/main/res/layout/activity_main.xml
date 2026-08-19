@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Live microphone subtitles"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Microphone → OpenRouter speech-to-text → German translation → draggable overlay."
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingBottom="22dp" />
+
+        <EditText
+            android:id="@+id/apiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/api_key_hint"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Speech-to-text model"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:paddingTop="20dp"
+            android:paddingBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/modelSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/customModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Custom OpenRouter STT model ID"
+            android:inputType="text"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Output language"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:paddingTop="20dp"
+            android:paddingBottom="4dp" />
+
+        <EditText
+            android:id="@+id/outputLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="German"
+            android:inputType="textCapWords"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:layout_marginTop="28dp" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stop"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stopped"
+            android:textColor="#555555"
+            android:paddingTop="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The API key is sent only to OpenRouter and is kept in memory for the running subtitle service; this app does not embed a key."
+            android:textSize="13sp"
+            android:textColor="#777777"
+            android:paddingTop="18dp" />
+
+    </LinearLayout>
+</ScrollView>
